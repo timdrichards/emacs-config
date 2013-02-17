@@ -5,7 +5,7 @@
     (add-to-list 'load-path "~/.emacs.d"))
 
 ; formatting options
-(setq js-indent-level 2) ; js indents
+(setq js-indent-level 2) ; javascript indents
 
 ; melpa package support
 (require 'package)
@@ -41,4 +41,17 @@
                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
                      (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
 
+; hooks
+; org-mode auto-fill on
+(add-hook 'org-mode-hook 'turn-on-auto-fill) 
+; automatically fill comments in programming modes:
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (auto-fill-mode 1)
+	    (set (make-local-variable 'fill-nobreak-predicate)
+		 (lambda ()
+		   (not (eq (get-text-property (point) 'face)
+			    'font-lock-comment-face))))))
 
+; key bindings
+(global-set-key (kbd "C-c q") 'auto-fill-mode)
