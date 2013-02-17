@@ -4,6 +4,9 @@
 (if (= 23 emacs-major-version)
     (add-to-list 'load-path "~/.emacs.d"))
 
+; formatting options
+(setq js-indent-level 2) ; js indents
+
 ; melpa package support
 (require 'package)
 (add-to-list 'package-archives
@@ -36,5 +39,6 @@
         (add-to-list 'comint-preoutput-filter-functions
                      (lambda (output)
                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
-                     (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))
+                     (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
+
 
