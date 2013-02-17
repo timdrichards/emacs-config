@@ -30,7 +30,7 @@
 		    [(20120622 937)
 		     nil "zen and art color theme for GNU Emacs 24 [source: github]" single])
  (yasnippet .
-	    [(20130112 1823)
+	    [(20130216 1027)
 	     nil "Yet another snippet extension for Emacs. [source: github]" tar])
  (yascroll .
 	   [(20120502 1738)
@@ -2371,7 +2371,7 @@
 		(3 0)))
 	      "vCard import/export for BBDB [source: github]" tar])
  (bbdb .
-       [(20130215 2248)
+       [(20130216 1043)
 	nil "core of BBDB [source: git]" tar])
  (bbcode-mode .
 	      [(20130121 2108)
@@ -2379,6 +2379,9 @@
  (bash-completion .
 		  [(20111120 1539)
 		   nil "BASH completion for the shell buffer [source: github]" tar])
+ (base16-theme .
+	       [(20130216 947)
+		nil "No description available. [source: github]" tar])
  (backup-walker .
 		[(20120625 1244)
 		 nil "quickly traverse all backups of a file [source: github]" single])
