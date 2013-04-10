@@ -41,6 +41,21 @@
                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
                      (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
 
+; org-mode
+; setup the agenda files:
+(setq org-agenda-files (list "~/Dropbox/org/upc/upc.org"
+			     "~/Dropbox/org/230/"
+			     "~/Dropbox/org/326/"
+			     "~/Dropbox/org/recs/"))
+; setup keys:
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+; indentation
+(global-set-key (kbd "RET") 'newline-and-indent)
+
 ; hooks
 ; org-mode auto-fill on
 (add-hook 'org-mode-hook 'turn-on-auto-fill) 
@@ -55,3 +70,15 @@
 
 ; key bindings
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/Dropbox/org/230/230.org" "~/Dropbox/org/upc/upc.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
