@@ -41,6 +41,12 @@
                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
                      (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
 
+; flymake-jslint setup.
+; see the documentation of the package via the package manager.
+(require 'flymake-jslint)
+(add-hook 'js-mode-hook 'flymake-jslint-load)
+
+
 ; org-mode
 ; setup the agenda files:
 (setq org-agenda-files (list "~/Dropbox/org/upc/upc.org"
