@@ -29,26 +29,50 @@
 (setq ac-ignore-case nil)
 
 ; js-comint support
-(require 'js-comint)
-(setq inferior-js-program-command "node")
-(setq inferior-js-mode-hook
-      (lambda ()
-        ;; We like nice colors
-        (ansi-color-for-comint-mode-on)
-        ;; Deal with some prompt nonsense
-        (add-to-list 'comint-preoutput-filter-functions
-                     (lambda (output)
-                       (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
-                     (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
+;; (require 'js-comint)
+;; (setq inferior-js-program-command "node")
+;; (setq inferior-js-mode-hook
+;;       (lambda ()
+;;         ;; We like nice colors
+;;         (ansi-color-for-comint-mode-on)
+;;         ;; Deal with some prompt nonsense
+;;         (add-to-list 'comint-preoutput-filter-functions
+;;                      (lambda (output)
+;; 		       (replace-regexp-in-string ".*1G.*0J> .*3G" "> "
+;;                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
+;;                      (replace-regexp-in-string ".*1G.*3G" "> " output)))))))
+
+; code folding setup
+(add-hook 'js-mode-hook
+	  (lambda ()
+	    ;; Scan the file for nested code blocks
+	    (imenu-add-menubar-index)
+	    ;; Activate the folding mode
+	    (hs-minor-mode t)))
+
+; general fly-make setup
+;; displays flymake messages in minibuffer
+(require 'flymake-cursor)
+;; sets the delay to display message:
+(custom-set-variables
+ '(help-at-pt-timer-delay 0.1)
+ '(help-at-pt-display-when-idle '(flymake-overlay)))
 
 ; flymake-jslint/jshint setup.
 ; see the documentation of the package via the package manager.
 ;(require 'flymake-jslint)
 ;(add-hook 'js-mode-hook 'flymake-jslint-load)
 
-(require 'flymake-jshint)
-(setq jshint-configuration-path "~/.emacs.d/jshint-config.json")
-(add-hook 'js-mode-hook 'flymake-jshint-load)
+;; (require 'flymake-jshint)
+;; (setq jshint-configuration-path "~/.emacs.d/jshint-config.json")
+;; (add-hook 'javascript-mode-hook 'flymake-jshint-load)
+;; (require 'flymake-jshint)
+;; (add-hook 'js-mode-hook
+;; 	       (lambda () (flymake-mode t)))
+;; (add-to-list 'load-path "/usr/local/share/npm/lib/node_modules/jshint-mode")
+;; (require 'flymake-jshint)
+;; (add-hook 'js-mode-hook
+;; 	      (lambda () (flymake-mode t)))
 
 
 ; org-mode
