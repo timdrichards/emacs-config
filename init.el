@@ -21,6 +21,8 @@
 (require-package 'ac-dabbrev)
 (require-package 'magit)
 (require-package 'smartparens)
+(require-package 'markdown-mode)
+(require-package 'markdown-mode+)
 
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
