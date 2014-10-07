@@ -41,3 +41,6 @@
 ;;; activate, otherwise, auto-complete will
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
+
+;;; JavaScript Setup
+(setq js-indent-level 2)
