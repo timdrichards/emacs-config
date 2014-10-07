@@ -23,6 +23,8 @@
 (require-package 'smartparens)
 (require-package 'markdown-mode)
 (require-package 'markdown-mode+)
+(require-package 'scala-mode2)
+(require-package 'lorem-ipsum)
 
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
