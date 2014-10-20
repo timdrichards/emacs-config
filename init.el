@@ -25,6 +25,12 @@
 (require-package 'markdown-mode+)
 (require-package 'scala-mode2)
 (require-package 'lorem-ipsum)
+(require-package 'go-mode)
+(require-package 'go-snippets)
+(require-package 'go-autocomplete)
+(require-package 'go-direx)
+(require-package 'go-eldoc)
+(require-package 'go-errcheck)
 
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
@@ -46,3 +52,5 @@
 
 ;;; JavaScript Setup
 (setq js-indent-level 2)
+
+
