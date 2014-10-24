@@ -53,4 +53,5 @@
 ;;; JavaScript Setup
 (setq js-indent-level 2)
 
-
+;;; Go Setup
+(add-hook 'before-save-hook 'gofmt-before-save)
