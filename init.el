@@ -31,6 +31,7 @@
 (require-package 'go-direx)
 (require-package 'go-eldoc)
 (require-package 'go-errcheck)
+(require-package 'color-theme)
 
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
