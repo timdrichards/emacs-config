@@ -37,6 +37,9 @@
 (require-package 'professional-theme)
 (require-package 'spacegray-theme)
 
+;;; to load a theme:
+; M-x load-theme
+
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
 (require 'yasnippet)
