@@ -41,7 +41,9 @@
 ; set auto-indent on return
 (define-key global-map (kbd "RET") 'newline-and-indent)
 ; auto-pair mode
-(electric-pair-mode t)	     
+(electric-pair-mode t)
+; show matching braces
+(show-paren-mode t)
 
 ;;; to load a theme:
 ; M-x load-theme
