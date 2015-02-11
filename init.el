@@ -31,6 +31,11 @@
 (require-package 'go-direx)
 (require-package 'go-eldoc)
 (require-package 'go-errcheck)
+(require-package 'fiplr) ; fuzzy find file
+(require-package 'yaml-mode)
+(require-package 'plsql)
+
+;; Color themes
 (require-package 'color-theme)
 (require-package 'cyberpunk-theme)
 (require-package 'color-theme-sanityinc-tomorrow)
