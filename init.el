@@ -25,15 +25,15 @@
 (require-package 'markdown-mode+)
 (require-package 'scala-mode2)
 (require-package 'lorem-ipsum)
-(require-package 'go-mode)
-(require-package 'go-snippets)
-(require-package 'go-autocomplete)
-(require-package 'go-direx)
-(require-package 'go-eldoc)
-(require-package 'go-errcheck)
+;(require-package 'go-mode)
+;(require-package 'go-snippets)
+;(require-package 'go-autocomplete)
+;(require-package 'go-direx)
+;(require-package 'go-eldoc)
+;(require-package 'go-errcheck)
 (require-package 'fiplr) ; fuzzy find file
 (require-package 'yaml-mode)
-(require-package 'plsql)
+(require-package 'sql-indent)
 
 ;; Color themes
 (require-package 'color-theme)
@@ -75,7 +75,11 @@
 (setq js-indent-level 2)
 
 ;;; Go Setup
-(add-hook 'before-save-hook 'gofmt-before-save)
+;(add-hook 'before-save-hook 'gofmt-before-save)
+
+;;; sql setup
+(eval-after-load "sql"
+  (load-library "sql-indent"))
 
 ;;; Line number setup
 (global-linum-mode 1)
