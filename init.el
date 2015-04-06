@@ -78,8 +78,9 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;;; Line number setup
-(global-linum-mode 1)
-(setq linum-format "%4d \u2502 ")
+; Turning off for the moment. It interferes with cut-and-paste...
+;(global-linum-mode 1)
+;(setq linum-format "%4d \u2502 ")
 
 
 (custom-set-variables
