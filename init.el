@@ -25,6 +25,7 @@
 (require-package 'markdown-mode+)
 (require-package 'scala-mode2)
 (require-package 'lorem-ipsum)
+(require-package 'csv-mode)
 ;(require-package 'go-mode)
 ;(require-package 'go-snippets)
 ;(require-package 'go-autocomplete)
@@ -34,6 +35,11 @@
 (require-package 'fiplr) ; fuzzy find file
 (require-package 'yaml-mode)
 (require-package 'sql-indent)
+
+;; JavaScript
+(require-package 'flymake-gjshint)
+(require-package 'js3-mode)
+(require-package 'json-mode)
 
 ;; Color themes
 (require-package 'color-theme)
@@ -88,7 +94,7 @@
 ;(setq linum-format "%4d \u2502 ")
 
 ;;; Highlight current line
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 
 
 (custom-set-variables
