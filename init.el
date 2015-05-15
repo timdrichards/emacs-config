@@ -26,12 +26,12 @@
 (require-package 'scala-mode2)
 (require-package 'lorem-ipsum)
 (require-package 'csv-mode)
-;(require-package 'go-mode)
-;(require-package 'go-snippets)
-;(require-package 'go-autocomplete)
-;(require-package 'go-direx)
-;(require-package 'go-eldoc)
-;(require-package 'go-errcheck)
+(require-package 'go-mode)
+(require-package 'go-snippets)
+(require-package 'go-autocomplete)
+(require-package 'go-direx)
+(require-package 'go-eldoc)
+(require-package 'go-errcheck)
 (require-package 'fiplr) ; fuzzy find file
 (require-package 'yaml-mode)
 (require-package 'sql-indent)
@@ -82,7 +82,7 @@
 (setq js-indent-level 2)
 
 ;;; Go Setup
-;(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 ;;; sql setup
 (eval-after-load "sql"
