@@ -35,6 +35,7 @@
 (require-package 'fiplr) ; fuzzy find file
 (require-package 'yaml-mode)
 (require-package 'sql-indent)
+(require-package 'anything)
 
 ;; JavaScript
 (require-package 'flymake-gjshint)
